@@ -1,10 +1,23 @@
 /* General styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background: #f4f4f9;
   color: #333;
-  line-height: 3.6;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light & Dark Themes */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
 }
 
 /* Header */
@@ -15,17 +28,11 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-header p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-}
-
-/* Navigation */
 nav {
   background: #333;
   display: flex;
@@ -44,12 +51,20 @@ nav a:hover {
   color: #4CAF50;
 }
 
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 /* Sections */
 section {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
-    text-align: center;
+  text-align: center;
 }
 
 section h2 {
@@ -80,6 +95,31 @@ section h2 {
   color: #555;
 }
 
+/* Skills */
+.skill {
+  margin: 20px 0;
+}
+
+.skill p {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.skill-bar {
+  background: #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 25px;
+}
+
+.skill-fill {
+  background: #4CAF50;
+  height: 100%;
+  width: 0; /* start hidden */
+  border-radius: 25px;
+  transition: width 2s ease;
+}
+
 /* Contact links */
 #contact a {
   color: #4CAF50;
@@ -97,6 +137,43 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
+}
+
+/* Theme Toggle Container */
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #7bdd90;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Back-to-Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* hidden by default */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #45a049;
 }
 
 /* Responsive design */
