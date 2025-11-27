@@ -20,8 +20,9 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
-      <button id="darkToggle"></button>
+      <button id="darkToggle">🌙</button>
     </nav>
   </header>
 
@@ -38,21 +39,25 @@
     <p>I am currently studying BSc Computer Science at Biratnagar International College. I enjoy coding, designing, and exploring new technologies.</p>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects (organized using CSS Grid) -->
   <section id="projects">
     <h2>My Projects</h2>
+    <p class="note">
+      <strong>Note:</strong> Flexbox is one‑dimensional, while Grid is two‑dimensional.  
+      Here, I’ve used <em>CSS Grid</em> to arrange my project cards.
+    </p>
     <div class="projects">
-      <div class="card">
+      <div class="card" data-link="https://ankit-portfolio-project1.netlify.app">
         <h3>Project One</h3>
-        <p>A simple website built with HTML and CSS.</p>
+        <p>A simple website built with HTML,CSS and JavaScript.</p>
       </div>
-      <div class="card">
+      <div class="card" data-link="https://ankit-portfolio-project2.netlify.app">
         <h3>Project Two</h3>
-        <p>A Python tic‑tac‑toe game I created for fun.</p>
+        <p>A simple game which explores egypt pyramid built with unityhub.</p>
       </div>
-      <div class="card">
+      <div class="card" data-link="https://ankit-portfolio-project3.netlify.app">
         <h3>Project Three</h3>
-        <p>A simple banking system built in Java.</p>
+        <p>A simple banking system built with Java.</p>
       </div>
     </div>
   </section>
@@ -86,16 +91,45 @@
     </div>
   </section>
 
+  <!-- Image Slider Gallery -->
+  <section id="gallery">
+    <h2>Projects</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="/Image/Java final project.png" alt="Image 1">
+        <img src="/Image/unity final project.png" alt="Image 2">
+        <img src="/Image/weatherapp.png" alt="Image 3">
+        
+      </div>
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:ankitchy158@gmail.com">ankitchy158@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com">linkedin.com/in/ankit</a></p>
+    <form id="contactForm">
+      <div>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+      <p id="formMessage"></p>
+    </form>
   </section>
 
-  <!-- <footer>
+  <footer>
     <p>© 2025 Ankit Chaudhary. All rights reserved.</p>
-  </footer> -->
+  </footer>
 
   <!-- Back to Top Button -->
   <button id="backToTop">↑</button>
